@@ -1,0 +1,15 @@
+{
+    "require": {
+        "php": "^7.2|^8.0"
+    },
+    "require-dev": {
+        "christophwurst/nextcloud_testing": "0.12.4",
+        "nextcloud/coding-standard": "^0.5.0"
+    },
+    "scripts": {
+        "cs:fix": "php-cs-fixer fix",
+        "cs:check": "php-cs-fixer fix --dry-run --diff",
+        "lint": "find . -name \\*.php -not -path './vendor/*' -print0 | xargs -0 -n1 php -l",
+        "test": "phpunit --configuration phpunit.unit.xml --fail-on-warning"
+    }
+}
